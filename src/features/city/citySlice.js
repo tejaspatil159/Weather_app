@@ -14,6 +14,7 @@ const citySlice = createSlice({
     builder.addCase(fetchCity.pending, (state) => {
       state.loading = true;
     });
+
     builder.addCase(fetchCity.fulfilled, (state, action) => {
       state.loading = false;
       state.data = action.payload;
